@@ -29,16 +29,15 @@ public class MainActivity extends AppCompatActivity {
     public void showScore(View view) {
         String finalScore = "";
         EditText name = (EditText) findViewById(R.id.Name);
-        String yourName =name.getText().toString();
-        if(yourName.equalsIgnoreCase(""))
+        String yourName = name.getText().toString();
+        if (yourName.equalsIgnoreCase(""))
 
         {
             Toast toast = Toast.makeText(getApplicationContext(), "Please Enter Your name", Toast.LENGTH_SHORT);
             TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
             v.setTextSize(20);
             toast.show();
-        }
-        else {
+        } else {
             int score = calculateScore();
             if (score == 7) {
                 finalScore = name.getText().toString() + "\n Excellent! you achieve the fullmark : " + score + "/7";
@@ -47,8 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 finalScore = name.getText().toString() + "\n score is : " + score + "/7";
             }
 
-            String cr = "#FF9800";
-            int color = Color.parseColor(cr);
+
             Toast toast = Toast.makeText(getApplicationContext(), finalScore, Toast.LENGTH_SHORT);
             TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
             v.setTextSize(30);
@@ -64,13 +62,13 @@ public class MainActivity extends AppCompatActivity {
 
         String Q1_answer = Q1_text.getText().toString();
         if (Q1_answer.equalsIgnoreCase("String")) {
-            score = score + 1;
+            score++;
         }
 
         // Fix user answer for Question 2
         RadioButton Q2_radio = (RadioButton) findViewById(R.id.Q2_b_radio_button);
         if (Q2_radio.isChecked() == true) {
-            score = score + 1;
+            score++;
         }
         // Fix user answer for Question 3
         CheckBox Q3_checkBox_a = (CheckBox) findViewById((R.id.Q3_a_checkbox));
@@ -80,25 +78,25 @@ public class MainActivity extends AppCompatActivity {
 
         if (Q3_checkBox_c.isChecked() && !Q3_checkBox_a.isChecked() && !Q3_checkBox_b.isChecked() && Q3_checkBox_d.isChecked()) {
 
-            score = score + 1;
+            score++;
 
         }
         // Fix user answer for Question 4
         RadioButton Q4_radio = (RadioButton) findViewById(R.id.Q4_c_radio_button);
         if (Q4_radio.isChecked() == true) {
-            score = score + 1;
+            score++;
         }
         // Fix user answer for Question 5
         RadioButton Q5_radio = (RadioButton) findViewById(R.id.Q5_a_radio_button);
         if (Q5_radio.isChecked() == true) {
-            score = score + 1;
+            score++;
         }
 
         // Fix user answer for Question 6
         EditText Q6_text = (EditText) findViewById(R.id.Q6_EditText);
         String Q6_answer = Q6_text.getText().toString();
         if (Q6_answer.contains("true") && Q6_answer.contains("false")) {
-            score = score + 1;
+            score++;
         }
 
         // Fix user answer for Question 7
@@ -116,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                 !Q7_checkBox_e.isChecked() && !Q7_checkBox_f.isChecked() &&
                 Q7_checkBox_g.isChecked() && !Q7_checkBox_h.isChecked()) {
 
-            score = score + 1;
+            score++;
 
         }
 

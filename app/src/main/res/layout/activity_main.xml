@@ -5,33 +5,35 @@
     style="@android:style/Widget.Holo.Light.ScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
+    android:background="@drawable/back2"
     tools:context="com.example.android.educationalapp.MainActivity">
 
     <LinearLayout
-        android:paddingTop="12dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="12dp">
 
         <TextView
             style="@style/header"
             android:fontFamily="sans-serif-condensed"
             android:gravity="center"
-            android:paddingTop="8dp"
+            android:paddingTop="12dp"
+            android:layout_marginTop="1dp"
             android:text="Android basics exam" />
 
         <EditText
             android:id="@+id/Name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:layout_marginLeft="24dp"
             android:layout_marginRight="24dp"
-            android:layout_marginBottom="20dp"
-           android:hint="Please Enter your name"
+            android:hint="Please Enter your name"
             android:imeOptions="actionDone"
             android:inputType="textPersonName" />
-
 
 
         <TextView
@@ -49,9 +51,9 @@
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="24dp"
-                android:windowSoftInputMode="stateHidden|adjustResize"
                 android:imeOptions="actionDone"
-                android:inputType="text" />
+                android:inputType="text"
+                android:windowSoftInputMode="stateHidden|adjustResize" />
 
             <TextView
                 style="@style/Question1Text"
@@ -75,8 +77,9 @@
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="24dp">
+            android:layout_marginLeft="24dp"
+            android:orientation="horizontal">
+
 
             <RadioButton
                 android:id="@+id/Q2_a_radio_button"
@@ -119,30 +122,46 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <CheckBox
-                android:id="@+id/Q3_a_checkbox"
-                style="@style/Check_Box"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="24dp"
+                android:paddingRight="42dp">
+
+                <CheckBox
+                    android:id="@+id/Q3_a_checkbox"
+                    style="@style/Check_Box"
+                    android:text="class" />
+
+                <CheckBox
+                    android:id="@+id/Q3_b_checkbox"
+                    style="@style/Check_Box"
+                    android:text="public" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="20dp"
-                android:text="class" />
+                android:orientation="vertical">
 
-            <CheckBox
-                android:id="@+id/Q3_b_checkbox"
-                style="@style/Check_Box"
-                android:layout_marginRight="20dp"
-                android:text="public" />
+                <CheckBox
+                    android:id="@+id/Q3_c_checkbox"
+                    style="@style/Check_Box"
 
-            <CheckBox
-                android:id="@+id/Q3_c_checkbox"
-                style="@style/Check_Box"
-                android:layout_marginRight="20dp"
-                android:text="boolean" />
+                    android:layout_below="@id/Q3_a_checkbox"
+                    android:text="boolean" />
 
-            <CheckBox
-                android:id="@+id/Q3_d_checkbox"
-                style="@style/Check_Box"
-                android:layout_marginRight="20dp"
-                android:text="char" />
+                <CheckBox
+                    android:id="@+id/Q3_d_checkbox"
+                    style="@style/Check_Box"
+                    android:text="char" />
+            </LinearLayout>
+
+
         </LinearLayout>
 
         <TextView
@@ -158,32 +177,30 @@
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="24dp">
+            android:layout_marginLeft="24dp"
+            android:orientation="vertical">
+
 
             <RadioButton
                 android:id="@+id/Q4_a_radio_button"
                 style="@style/radio_button"
-                android:layout_marginRight="8dp"
                 android:text="editText()" />
 
             <RadioButton
                 android:id="@+id/Q4_b_radio_button"
                 style="@style/radio_button"
-                android:layout_marginRight="8dp"
                 android:text="setText()" />
 
             <RadioButton
                 android:id="@+id/Q4_c_radio_button"
                 style="@style/radio_button"
-                android:layout_marginRight="8dp"
                 android:text="getText()" />
 
             <RadioButton
                 android:id="@+id/Q4_d_radio_button"
                 style="@style/radio_button"
-                android:layout_marginRight="8dp"
                 android:text="text()" />
+
         </RadioGroup>
 
         <TextView
@@ -204,32 +221,35 @@
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="24dp">
+            android:layout_marginLeft="24dp"
+            android:orientation="horizontal">
 
-            <RadioButton
-                android:id="@+id/Q5_a_radio_button"
-                style="@style/radio_button"
-                android:layout_marginRight="20dp"
-                android:text="String" />
 
-            <RadioButton
-                android:id="@+id/Q5_b_radio_button"
-                style="@style/radio_button"
-                android:layout_marginRight="20dp"
-                android:text="int" />
+                <RadioButton
+                    android:id="@+id/Q5_a_radio_button"
+                    style="@style/radio_button"
+                    android:layout_marginRight="20dp"
+                    android:text="String" />
 
-            <RadioButton
-                android:id="@+id/Q5_c_radio_button"
-                style="@style/radio_button"
-                android:layout_marginRight="20dp"
-                android:text="char" />
+                <RadioButton
+                    android:id="@+id/Q5_b_radio_button"
+                    style="@style/radio_button"
+                    android:layout_marginRight="20dp"
+                    android:text="int" />
 
-            <RadioButton
-                android:id="@+id/Q5_d_radio_button"
-                style="@style/radio_button"
-                android:layout_marginRight="20dp"
-                android:text="void" />
+
+                <RadioButton
+                    android:id="@+id/Q5_c_radio_button"
+                    style="@style/radio_button"
+                    android:layout_marginRight="20dp"
+                    android:text="char" />
+
+                <RadioButton
+                    android:id="@+id/Q5_d_radio_button"
+                    style="@style/radio_button"
+                    android:layout_marginRight="20dp"
+                    android:text="void" />
+
         </RadioGroup>
 
         <TextView
@@ -247,9 +267,9 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
-            android:windowSoftInputMode="stateHidden"
             android:imeOptions="actionDone"
-            android:inputType="text" />
+            android:inputType="text"
+            android:windowSoftInputMode="stateHidden" />
 
         <TextView
             style="@style/QuestionHeader"
@@ -269,35 +289,29 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="20dp"
                 android:orientation="vertical">
 
                 <CheckBox
                     android:id="@+id/Q7_a_checkbox"
                     style="@style/Check_Box"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="20dp"
                     android:text="background" />
 
                 <CheckBox
 
                     android:id="@+id/Q7_b_checkbox"
                     style="@style/Check_Box"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="20dp"
                     android:text="textStyle" />
 
                 <CheckBox
                     android:id="@+id/Q7_c_checkbox"
                     style="@style/Check_Box"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="20dp"
                     android:text="text" />
 
                 <CheckBox
                     android:id="@+id/Q7_d_checkbox"
                     style="@style/Check_Box"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="20dp"
                     android:text="textColor" />
 
 
@@ -306,34 +320,28 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="20dp"
                 android:orientation="vertical">
 
                 <CheckBox
                     android:id="@+id/Q7_e_checkbox"
                     style="@style/Check_Box"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="20dp"
                     android:text="scaleType" />
 
                 <CheckBox
                     android:id="@+id/Q7_f_checkbox"
                     style="@style/Check_Box"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="20dp"
                     android:text="textAlignment" />
 
                 <CheckBox
                     android:id="@+id/Q7_g_checkbox"
                     style="@style/Check_Box"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="20dp"
                     android:text="textSize" />
 
                 <CheckBox
                     android:id="@+id/Q7_h_checkbox"
                     style="@style/Check_Box"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="20dp"
                     android:text="fontFamily" />
 
 
@@ -341,30 +349,31 @@
 
         </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-        <Button
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="8dp"
-            android:onClick="showScore"
-            android:text="Submit" />
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
 
-        <Button
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="16dp"
-            android:onClick="resetScore"
-            android:text="Reset"
-            />
+            <Button
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="16dp"
+                android:onClick="showScore"
+                android:text="Submit" />
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:onClick="resetScore"
+                android:text="Reset" />
         </LinearLayout>
     </LinearLayout>
 
