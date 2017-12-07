@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@android:style/Widget.Holo.Light.ScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context="com.example.android.educationalapp.MainActivity">
+
+    <LinearLayout
+        android:paddingTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/header"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:text="Android basics exam" />
+
+        <EditText
+            android:id="@+id/Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="20dp"
+           android:hint="Please Enter your name"
+            android:imeOptions="actionDone"
+            android:inputType="textPersonName" />
+
+
+
+        <TextView
+            style="@style/QuestionHeader"
+            android:fontFamily="serif-monospace"
+            android:text="Question 1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/Q1_EditText"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:windowSoftInputMode="stateHidden|adjustResize"
+                android:imeOptions="actionDone"
+                android:inputType="text" />
+
+            <TextView
+                style="@style/Question1Text"
+                android:fontFamily="sans-serif-condensed"
+                android:paddingLeft="2dp"
+                android:text="is a data type to store a sequence of characters." />
+
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/QuestionHeader"
+            android:fontFamily="serif-monospace"
+            android:text="Question 2" />
+
+        <TextView
+            style="@style/QuestionText"
+            android:fontFamily="sans-serif-condensed"
+            android:text="What is the value stored in result ?    (result = 6/2*3)" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="24dp">
+
+            <RadioButton
+                android:id="@+id/Q2_a_radio_button"
+                style="@style/radio_button"
+                android:layout_marginRight="20dp"
+                android:text="1.2" />
+
+            <RadioButton
+                android:id="@+id/Q2_b_radio_button"
+                style="@style/radio_button"
+                android:layout_marginRight="20dp"
+                android:text="9" />
+
+            <RadioButton
+                android:id="@+id/Q2_c_radio_button"
+                style="@style/radio_button"
+                android:layout_marginRight="20dp"
+                android:text="1" />
+
+            <RadioButton
+                android:id="@+id/Q2_d_radio_button"
+                style="@style/radio_button"
+                android:layout_marginRight="20dp"
+                android:text="0" />
+        </RadioGroup>
+
+
+        <TextView
+            style="@style/QuestionHeader"
+            android:fontFamily="serif-monospace"
+            android:text="Question 3" />
+
+        <TextView
+            style="@style/QuestionText"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Which of them is a data type ?" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/Q3_a_checkbox"
+                style="@style/Check_Box"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="20dp"
+                android:text="class" />
+
+            <CheckBox
+                android:id="@+id/Q3_b_checkbox"
+                style="@style/Check_Box"
+                android:layout_marginRight="20dp"
+                android:text="public" />
+
+            <CheckBox
+                android:id="@+id/Q3_c_checkbox"
+                style="@style/Check_Box"
+                android:layout_marginRight="20dp"
+                android:text="boolean" />
+
+            <CheckBox
+                android:id="@+id/Q3_d_checkbox"
+                style="@style/Check_Box"
+                android:layout_marginRight="20dp"
+                android:text="char" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/QuestionHeader"
+            android:fontFamily="serif-monospace"
+            android:text="Question 4" />
+
+        <TextView
+            style="@style/QuestionText"
+            android:fontFamily="sans-serif-condensed"
+            android:text="What Java method gets you the text that the user entered ?" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="24dp">
+
+            <RadioButton
+                android:id="@+id/Q4_a_radio_button"
+                style="@style/radio_button"
+                android:layout_marginRight="8dp"
+                android:text="editText()" />
+
+            <RadioButton
+                android:id="@+id/Q4_b_radio_button"
+                style="@style/radio_button"
+                android:layout_marginRight="8dp"
+                android:text="setText()" />
+
+            <RadioButton
+                android:id="@+id/Q4_c_radio_button"
+                style="@style/radio_button"
+                android:layout_marginRight="8dp"
+                android:text="getText()" />
+
+            <RadioButton
+                android:id="@+id/Q4_d_radio_button"
+                style="@style/radio_button"
+                android:layout_marginRight="8dp"
+                android:text="text()" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/QuestionHeader"
+            android:fontFamily="serif-monospace"
+            android:text="Question 5" />
+
+        <TextView
+            style="@style/QuestionText"
+            android:fontFamily="sans-serif-condensed"
+            android:text="What is the return data type of calculateAge method ?" />
+
+        <TextView
+            style="@style/QuestionText"
+            android:fontFamily="sans-serif-condensed"
+            android:text="String yourAge = calculateAge(21,1,1988);" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="24dp">
+
+            <RadioButton
+                android:id="@+id/Q5_a_radio_button"
+                style="@style/radio_button"
+                android:layout_marginRight="20dp"
+                android:text="String" />
+
+            <RadioButton
+                android:id="@+id/Q5_b_radio_button"
+                style="@style/radio_button"
+                android:layout_marginRight="20dp"
+                android:text="int" />
+
+            <RadioButton
+                android:id="@+id/Q5_c_radio_button"
+                style="@style/radio_button"
+                android:layout_marginRight="20dp"
+                android:text="char" />
+
+            <RadioButton
+                android:id="@+id/Q5_d_radio_button"
+                style="@style/radio_button"
+                android:layout_marginRight="20dp"
+                android:text="void" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/QuestionHeader"
+            android:fontFamily="serif-monospace"
+            android:text="Question 6" />
+
+        <TextView
+            style="@style/QuestionText"
+            android:fontFamily="sans-serif-condensed"
+            android:text="What the two states for storing information in a boolean ?" />
+
+        <EditText
+            android:id="@+id/Q6_EditText"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:windowSoftInputMode="stateHidden"
+            android:imeOptions="actionDone"
+            android:inputType="text" />
+
+        <TextView
+            style="@style/QuestionHeader"
+            android:fontFamily="serif-monospace"
+            android:text="Question 7" />
+
+        <TextView
+            style="@style/QuestionText"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Select the attribute(s) you need to style the text  to be ( Color:white , 16sp , bold )" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/Q7_a_checkbox"
+                    style="@style/Check_Box"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="20dp"
+                    android:text="background" />
+
+                <CheckBox
+
+                    android:id="@+id/Q7_b_checkbox"
+                    style="@style/Check_Box"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="20dp"
+                    android:text="textStyle" />
+
+                <CheckBox
+                    android:id="@+id/Q7_c_checkbox"
+                    style="@style/Check_Box"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="20dp"
+                    android:text="text" />
+
+                <CheckBox
+                    android:id="@+id/Q7_d_checkbox"
+                    style="@style/Check_Box"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="20dp"
+                    android:text="textColor" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/Q7_e_checkbox"
+                    style="@style/Check_Box"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="20dp"
+                    android:text="scaleType" />
+
+                <CheckBox
+                    android:id="@+id/Q7_f_checkbox"
+                    style="@style/Check_Box"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="20dp"
+                    android:text="textAlignment" />
+
+                <CheckBox
+                    android:id="@+id/Q7_g_checkbox"
+                    style="@style/Check_Box"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="20dp"
+                    android:text="textSize" />
+
+                <CheckBox
+                    android:id="@+id/Q7_h_checkbox"
+                    style="@style/Check_Box"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="20dp"
+                    android:text="fontFamily" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="8dp"
+            android:onClick="showScore"
+            android:text="Submit" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:onClick="resetScore"
+            android:text="Reset"
+            />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
